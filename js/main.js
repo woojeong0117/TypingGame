@@ -37,7 +37,7 @@ function run() {
 
 function checkStatus() {
   if (!isPlaying && time === 0) {
-    buttonChange('게임시작');
+    buttonChange('게임종료');
     clearInterval(checkInterval);
   }
 }
@@ -48,7 +48,7 @@ function getWords() {
     .get('https://random-word-api.herokuapp.com/word?number=100')
     .then(function (response) {
       response.data.forEach((word) => {
-        if (word.length < 10) {
+        if (word.length < 6) {
           words.push(word);
         }
       });
