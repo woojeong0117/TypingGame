@@ -1,5 +1,5 @@
 // 사용변수
-const GAME_TIME = 10;
+const GAME_TIME = 20;
 let score = 0;
 let time = GAME_TIME;
 let isPlaying = false;
@@ -39,6 +39,7 @@ function checkStatus() {
   if (!isPlaying && time === 0) {
     buttonChange('게임시작');
     clearInterval(checkInterval);
+    wordDisplay.innerText = 'Hello';
   }
 }
 
