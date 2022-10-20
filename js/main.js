@@ -37,7 +37,7 @@ function run() {
 
 function checkStatus() {
   if (!isPlaying && time === 0) {
-    buttonChange('게임종료');
+    buttonChange('게임시작');
     clearInterval(checkInterval);
   }
 }
@@ -53,7 +53,7 @@ function getWords() {
         }
       });
       buttonChange('게임시작');
-      words = response.data;
+      console.log(words);
     })
     .catch(function (error) {
       // handle error
